@@ -1,4 +1,16 @@
-function hideNavigationInfo() {
+function hideRegeion() {
+    // Description:
+    //   hide 'role="region"' element from all elements
+    //
+
+    document.querySelectorAll('[role="region"]').forEach(function (elm) {
+        elm.style.visibility = "hidden";
+        elm.style.display = "none";
+    });
+};
+
+
+function hideNavigation() {
     // Description:
     //   hide 'role="navigation"' element from all elements
     //
@@ -22,11 +34,13 @@ function hideMinimap() {
     elm.style.display = "none";
 }
 
-console.log("PseudoGuessr extension loaded");
+console.log("UsoGuessr extension loaded");
 
-window.addEventListener("load", hideNavigationInfo, false);
+window.addEventListener("load", hideRegeion, false);
+window.addEventListener("load", hideNavigation, false);
 window.addEventListener("load", hideMinimap, false);
 
 // event fired on Street View url is changed
-window.navigation.addEventListener("navigate", hideNavigationInfo, false);
+window.navigation.addEventListener("navigate", hideRegeion, false);
+window.navigation.addEventListener("navigate", hideNavigation, false);
 window.navigation.addEventListener("navigate", hideMinimap, false);

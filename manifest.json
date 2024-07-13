@@ -1,5 +1,5 @@
 {
-    "name": "PseudoGuessr",
+    "name": "UsoGuessr",
     "version": "1.0",
     "manifest_version": 3,
     "description": "Hide Location information on Google Map",
@@ -7,7 +7,8 @@
     "content_scripts": [
         {
             "matches": [
-                "<all_urls>"
+                "https://www.google.com/maps/*",
+                "https://www.google.co.jp/maps/*"
             ],
             "js": [
                 "src/hide_location.js"
