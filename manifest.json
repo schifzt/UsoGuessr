@@ -1,0 +1,17 @@
+{
+    "name": "PseudoGuessr",
+    "version": "1.0",
+    "manifest_version": 3,
+    "description": "Hide Location information on Google Map",
+    "minimum_chrome_version": "102",
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "src/hide_location.js"
+            ]
+        }
+    ]
+}
