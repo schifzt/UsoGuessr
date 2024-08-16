@@ -4,9 +4,6 @@
     "manifest_version": 3,
     "description": "Hide Location information on Google Map",
     "minimum_chrome_version": "102",
-    "action": {
-        "default_title": "UsoGuessr"
-    },
     "content_scripts": [
         {
             "matches": [
@@ -14,7 +11,7 @@
                 "https://www.google.co.jp/maps/*"
             ],
             "js": [
-                "src/main.js"
+                "./src/main.js"
             ]
         }
     ]
